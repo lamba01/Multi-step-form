@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bodycontent">
+    <section>       
+        <aside>         
+            <div class="container"><div class="number">1</div>
+            <div><span class="steps">STEP 1</span><p class="info">YOUR INFO</p></div></div>
+            <div class="container"><div class="number">2</div>
+            <div><span class="steps">STEP 2</span><p class="info">SELECT PLAN</p></div></div>
+            <div class="container"><div class="number">3</div>
+          <div><span class="steps">STEP 3</span><p class="info">ADD-ONS</p></div></div>
+            <div class="container"><div class="number">4</div>
+            <div><span class="steps">STEP 4</span><p class="info">SUMMARY</p></div></div>
+        </aside>  
+        <main>
+           <div class="step-1"> <h2 class="head">Personal info</h2>
+            <p class="paragraph">Please provide your name, email address, and phone number</p>
+            <form action="" > 
+                <label for="name">Name</label>         
+                <input type="text" id="name" placeholder=" e.g. Stephen King">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                <label for="phone-number">Phone Number</label>
+                <input type="number" id="phone-number" placeholder=" e.g. +1 234 567 890">              
+            </form></div>
+            <div class="step-2">
+                <h2 class="head">Select your plan</h2>
+                <p class="paragraph">You have the option of monthly or yearly billing</p>
+                <div class="plans"><div class="card"><img src="/assets/images/icon-arcade.svg" class="step-2img" alt="">
+                    <div class="step-2text"><h5 class="head">Arcade</h5><span class="amt">$9/mo</span></div></div>
+                <div class="card"><img src="/assets/images/icon-advanced.svg" class="step-2img" alt="">
+                    <div class="step-2text"><h5 class="head">Advanced</h5><span class="amt">$12/mo</span></div></div>
+                <div class="card"><img src="/assets/images/icon-pro.svg" class="step-2img" alt="">
+                    <div class="step-2text"><h5 class="head">Pro</h5><span class="amt">$15/mo</span></div></div>
+                </div>
+                <div class="timeframe"><span class="monthly">Monthly</span>
+                    <label class="switch"> 
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                    </label> 
+                    <span class="yearly">Yearly</span>
+                </div>
+            </div>
+             <div class="btns"><span class="go-back">Go back</span>
+                <button class="next-step">Next Step</button></div> 
+        </main>        
+    </section>
+</div>
+</body>
+</html>

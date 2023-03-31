@@ -1,0 +1,246 @@
+@font-face {
+    font-family: boldfont;
+    src: url(assets/fonts/Ubuntu-Bold.ttf);
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: mediumfont;
+    src: url(assets/fonts/Ubuntu-Medium.ttf);
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: regularfont;
+    src: url(assets/fonts/Ubuntu-Regular.ttf);
+    font-weight: 400;
+  }
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+}
+body {
+    background-color: hsl(217, 100%, 97%);
+}
+.bodycontent {
+    position: relative;
+    height: 100vh;
+}
+section {
+    display: flex;
+    background-color: hsl(213, 23%, 92%);
+    border-radius: 10px;
+    padding: 15px;
+    height: 70vh;
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container {
+    display: flex; 
+    margin: 20px;
+}
+aside {
+    background-image: url("/assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0px;  
+    width: 30%;
+    margin-right: 5vw;
+}
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.paragraph {
+    padding-bottom: 20px;
+    color: hsl(231, 11%, 63%);
+    font-family: "regularfont";
+    font-size: 12px;
+}
+input {
+    width: 95%;
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+.head {
+    color: hsl(213, 96%, 18%);
+    font-family: "boldfont";
+}
+label {
+    color: hsl(213, 96%, 18%);
+    padding-top: 10px;
+    font-family: "mediumfont";
+    font-size: 12px;
+}
+::placeholder {
+    font-family: "regularfont";
+}
+button{
+    border-radius: 8px;
+    height: 35px;
+    width: 90px;
+    color: hsl(243, 100%, 62%);  
+}
+.steps{
+    font-size: 11px;
+    font-family: "regularfont";
+    color: hsl(231, 11%, 63%)
+}
+.info {
+    font-size: 12px;
+    font-family: "boldfont";
+    color:hsl(0, 0%, 100%)
+}
+.number {
+    width: 25px;
+    height: 25px;
+    color: white;
+    border-radius: 50%;
+    border: solid 1px hsl(229, 24%, 87%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    margin-right: 10px;
+}
+.number.active {
+    color: black;
+    background-color: hsl(206, 94%, 87%);
+}
+.step-1 {
+    display: none;
+}
+/* .step-2 {
+    display: none;
+} */
+.plans {
+    display: flex;
+}
+.aa {
+    color: hsl(231, 11%, 63%);
+}
+.card {
+    width: 7em;
+    height: 8.3em;
+    border: solid hsl(231, 11%, 63%) 1px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.card:hover {
+    border: solid 1px hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+.card.active2 {
+    background-color: hsl(231, 11%, 63%);
+    border: solid 1px hsl(243, 100%, 62%);
+}
+.step-2img {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.step-2text {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.amt {
+    color: hsl(231, 11%, 63%);
+}
+/* Toggle Slide */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 7px;
+    margin: 0px 20px;
+} 
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 11px;
+    width: 11px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:focus + .slider{
+    box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider::before{
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+.slider.round{
+    border-radius: 30px;
+}
+.slider.round::before{
+    border-radius: 60%;
+}
+.timeframe {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: hsl(229, 24%, 87%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.monthly, .yearly {
+    color: hsl(231, 11%, 63%);
+}
+.next-step {
+    background-color: hsl(213, 96%, 18%);
+    border: none;
+    font-family: "regularfont";
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.go-back {
+    font-family: "regularfont";
+    margin: 0px;
+    color: hsl(231, 11%, 63%);
+}
+.go-back:hover {
+    color: hsl(213, 96%, 18%);
+    cursor: pointer;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
