@@ -32,7 +32,7 @@ section {
     border-radius: 10px;
     padding: 15px;
     height: 70vh;
-    width: 50vw;
+    width: 55vw;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -110,7 +110,7 @@ button{
     font-size: 11px;
     margin-right: 10px;
 }
-.number.active {
+.active {
     color: black;
     background-color: hsl(206, 94%, 87%);
 }
@@ -127,8 +127,8 @@ button{
     color: hsl(231, 11%, 63%);
 }
 .card {
-    width: 7em;
-    height: 8.3em;
+    width: 10vw;
+    height: 25vh;
     border: solid hsl(231, 11%, 63%) 1px;
     border-radius: 10px;
     margin-right: 10px;
@@ -137,10 +137,10 @@ button{
     border: solid 1px hsl(243, 100%, 62%);
     cursor: pointer;
 }
-.card.active2 {
-    background-color: hsl(231, 11%, 63%);
+.active2 {
+    background-color: hsl(217, 100%, 97%);
     border: solid 1px hsl(243, 100%, 62%);
-}
+} 
 .step-2img {
     position: relative;
     top: 10px;
@@ -151,8 +151,19 @@ button{
     left: 10px;
     bottom: 10px;
 }
-.amt {
+.yearly-info {
+    display: none;
+}
+.amt, .yearly-amt {
     color: hsl(231, 11%, 63%);
+    font-family: "regularfont";
+    font-size: 13px;
+}
+.yearly-info p {
+    color: hsl(213, 96%, 18%);
+    font-family: "mediumfont";
+    font-size: 10px;
+    
 }
 /* Toggle Slide */
 .switch{
@@ -211,9 +222,15 @@ input:checked + .slider::before{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh;
 }
-.monthly, .yearly {
+ .yearly {
     color: hsl(231, 11%, 63%);
+    font-family: "regularfont";
+    font-size: 14px;
+}
+.monthly {
+    color: hsl(213, 96%, 18%);
 }
 .next-step {
     background-color: hsl(213, 96%, 18%);
