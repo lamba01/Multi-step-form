@@ -28,7 +28,7 @@ body {
 }
 section {
     display: flex;
-    background-color: hsl(213, 23%, 92%);
+    background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     padding: 15px;
     height: 70vh;
@@ -62,12 +62,16 @@ main {
     font-family: "regularfont";
     font-size: 12px;
 }
-input {
+.userdata {
     width: 95%;
     height: 20px;
     padding: 10px;
     border-radius: 5px;
     border-width: 1px;
+    cursor: pointer;
+}
+.userdata:hover {
+    border: 0.005rem solid blue;
 }
 .head {
     color: hsl(213, 96%, 18%);
@@ -78,6 +82,13 @@ label {
     padding-top: 10px;
     font-family: "mediumfont";
     font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.errormsg {
+    color: hsl(354, 84%, 57%);
+    font-family: "mediumfont";
+    display: none;
 }
 ::placeholder {
     font-family: "regularfont";
@@ -110,16 +121,24 @@ button{
     font-size: 11px;
     margin-right: 10px;
 }
+
 .active {
     color: black;
     background-color: hsl(206, 94%, 87%);
 }
-.step-1 {
+/* .step-1 {
+    display: none;
+}  */
+
+.step-2 {
+    display: none;
+}  
+.step-3 {
+    display: none;
+} 
+.step-4 {
     display: none;
 }
-/* .step-2 {
-    display: none;
-} */
 .plans {
     display: flex;
 }
@@ -246,6 +265,7 @@ input:checked + .slider::before{
     font-family: "regularfont";
     margin: 0px;
     color: hsl(231, 11%, 63%);
+    visibility: hidden;
 }
 .go-back:hover {
     color: hsl(213, 96%, 18%);
@@ -257,7 +277,41 @@ input:checked + .slider::before{
     align-items: center;
 }
 
-
-
-
-
+/* step 3 container design */
+.step3-divs {
+    display: flex;
+    align-items: center;
+    border: 1px hsl(231, 11%, 63%) solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 25vw;
+    cursor: pointer;
+}
+.step3-divs:hover {
+    border: 1px hsl(243, 100%, 62%) solid;
+}
+.step3-divs input {
+    margin-right: 15px;
+}
+.step3main {
+    font-family: "regularfont";
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
+}
+.step3-divs div p{
+    font-family: "regularfont";
+    color: hsl(231, 11%, 63%);
+    font-size: 12px;
+}
+.step3-divs span {
+    font-family: "mediumfont";
+    font-size: 12px;
+    color: hsl(243, 100%, 62%);
+    position: absolute;
+    right: 20px;
+}
+.selected {
+    background-color: hsl(231, 100%, 99%);
+    border: 1px solid hsl(243, 100%, 62%);
+}

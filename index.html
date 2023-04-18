@@ -23,12 +23,12 @@
            <div class="step-1"> <h2 class="head">Personal info</h2>
             <p class="paragraph">Please provide your name, email address, and phone number</p>
             <form action="" > 
-                <label for="name">Name</label>         
-                <input type="text" id="name" placeholder=" e.g. Stephen King">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
-                <label for="phone-number">Phone Number</label>
-                <input type="number" id="phone-number" placeholder=" e.g. +1 234 567 890">              
+                <label for="name">Name <span class="errormsg" id="error1">This field is required</span></label>         
+                <input type="text" id="name" class="userdata" required placeholder=" e.g. Stephen King">
+                <label for="email">Email Address <span class="errormsg" id="error2">Invalid email address</label>
+                <input type="email" id="email" class="userdata" required placeholder="e.g. stephenking@lorem.com">
+                <label for="phone-number">Phone Number <span class="errormsg" id="phone">Invalid format</span> <span class="errormsg" id="error3">This field is required</span></label>
+                <input type="text" id="phone-number" class="userdata" required placeholder=" e.g. +1 234 567 890">               
             </form></div>
             <div class="step-2">
                 <h2 class="head">Select your plan</h2>
@@ -45,14 +45,37 @@
                 </div>
                 <div class="timeframe"><span class="monthly">Monthly</span>
                     <label class="switch"> 
-                    <input type="checkbox" class="selector" onclick="test()">
+                    <input type="checkbox" class="selector" onclick="toggledisplay()">
                     <span class="slider round"></span>
                     </label> 
                     <span class="yearly">Yearly</span>
                 </div>
             </div>
-             <div class="btns"><span class="go-back">Go back</span>
-                <button class="next-step">Next Step</button></div> 
+            <div class="step-3">
+                <h2 class="head">Pick add-ons</h2>
+                <p class="paragraph">Add-ons help enhance your gaming experience.</p>
+                <div class="step3-divs" id="step3div1">
+                    <input type="checkbox" class="checkbox3" name="" id="checkbox1">
+                    <div><h6 class="step3main">Online service</h6><p>Access to multiplayer games</p></div>
+                    <span>+$1/mo</span>
+                </div>
+                <div class="step3-divs" id="step3div2">
+                    <input type="checkbox" class="checkbox3" name="" id="checkbox2">
+                    <div><h6 class="step3main">Larger storage </h6><p>Extra 1TB of cloud save</p></div>
+                    <span>+$2/mo</span>
+                </div>
+                <div class="step3-divs" id="step3div3">
+                    <input type="checkbox" class="checkbox3" name="" id="checkbox3">
+                    <div><h6 class="step3main">Customizable Profile</h6><p>Custom theme on your profile</p></div>
+                    <span>+$2/mo</span>
+                </div>
+            </div>
+            <div class="step-4">
+                <h2 class="head">Finishing up</h2>
+                <p class="paragraph">Double-check everything looks OK before confirming</p>
+            </div>
+            <div class="btns"><span class="go-back">Go back</span>
+                <button class="next-step" onclick="formvalidate(); nextpage();">Next Step</button></div> 
         </main>        
     </section>
 </div>
