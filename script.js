@@ -7,6 +7,7 @@ var step1 = document.querySelector('.step-1')
 var step2 = document.querySelector('.step-2')
 var step3 = document.querySelector('.step-3')
 var step4 = document.querySelector('.step-4')
+// toggle between yearly and monthly
 function toggledisplay() {
     let year = document.querySelector('.yearly')
     let month = document.querySelector('.monthly')
@@ -37,14 +38,14 @@ function toggledisplay() {
     }
 }
 
-
+// adding acive cass to 'select your plan' cards in step2 
 for (var i = 0; i < card.length; i++) {
     card[i].addEventListener("click", function() {
       var current = document.getElementsByClassName("active2");
       if (current.length > 0) {
         current[0].className = current[0].className.replace(" active2", "");
       }
-      // Add the active class to the current/clicked button
+      // Add the active class to the current/clicked card
       this.className += " active2";
     });
   }
@@ -130,15 +131,16 @@ function formvalidate() {
             step2.style.display = 'block'
         }
 }
+function nextpage() {
+    for (let index = 0; index < card.length; index++) {
+        if (card[index].classList.contains("active2")){
+            step2.style.display = 'none'
+            step3.style.display = 'block'
+        }
+        
+    }
+}
 
-// function nextpage() {
-//     let form = document.querySelector('form')
-//     if(form.checkValidity == true){
-//         step1.style.display = 'none'
-//     }else {
-//         alert("dd")
-//     }
-// }
 
 
 
