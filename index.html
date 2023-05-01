@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="active()">
     <div class="bodycontent">
     <section>       
         <aside>         
-            <div class="container"><div class="number">1</div>
+            <div class="container"><div class="number"  id="number1">1</div>
             <div><span class="steps">STEP 1</span><p class="info">YOUR INFO</p></div></div>
-            <div class="container"><div class="number">2</div>
+            <div class="container"><div class="number" id="number2">2</div>
             <div><span class="steps">STEP 2</span><p class="info">SELECT PLAN</p></div></div>
-            <div class="container"><div class="number">3</div>
+            <div class="container"><div class="number" id="number3">3</div>
           <div><span class="steps">STEP 3</span><p class="info">ADD-ONS</p></div></div>
-            <div class="container"><div class="number">4</div>
+            <div class="container"><div class="number" id="number4">4</div>
             <div><span class="steps">STEP 4</span><p class="info">SUMMARY</p></div></div>
         </aside>  
         <main>
@@ -24,11 +24,11 @@
             <p class="paragraph">Please provide your name, email address, and phone number</p>
             <form action="" > 
                 <label for="name">Name <span class="errormsg" id="error1">This field is required</span></label>         
-                <input type="text" id="name" class="userdata" required placeholder=" e.g. Stephen King">
-                <label for="email">Email Address <span class="errormsg" id="error2">Invalid email address</label>
-                <input type="email" id="email" class="userdata" required placeholder="e.g. stephenking@lorem.com">
+                <input type="text" oninput="errormsg1()" id="name" class="userdata" required placeholder=" e.g. Stephen King">
+                <label for="email">Email Address <span class="errormsg" id="mail">Invalid email address</span> <span class="errormsg" id="error2">This field is required</span></label>
+                <input type="email" oninput="errormsg2()" id="email" class="userdata" required placeholder="e.g. stephenking@lorem.com">
                 <label for="phone-number">Phone Number <span class="errormsg" id="phone">Invalid format</span> <span class="errormsg" id="error3">This field is required</span></label>
-                <input type="text" id="phone-number" class="userdata" required placeholder=" e.g. +1 234 567 890">               
+                <input type="text" oninput="errormsg3()" id="phone-number" class="userdata" required placeholder=" e.g. +1 234 567 890">               
             </form></div>
             <div class="step-2">
                 <h2 class="head">Select your plan</h2>
@@ -57,25 +57,42 @@
                 <div class="step3-divs" id="step3div1">
                     <input type="checkbox" class="checkbox3" name="" id="checkbox1">
                     <div><h6 class="step3main">Online service</h6><p>Access to multiplayer games</p></div>
-                    <span>+$1/mo</span>
+                    <span class="monthh">+$1/mo</span><span class="yearr">+$10/yr</span>
                 </div>
                 <div class="step3-divs" id="step3div2">
                     <input type="checkbox" class="checkbox3" name="" id="checkbox2">
                     <div><h6 class="step3main">Larger storage </h6><p>Extra 1TB of cloud save</p></div>
-                    <span>+$2/mo</span>
+                    <span class="monthh">+$2/mo</span><span class="yearr">+$20/yr</span>
                 </div>
                 <div class="step3-divs" id="step3div3">
                     <input type="checkbox" class="checkbox3" name="" id="checkbox3">
                     <div><h6 class="step3main">Customizable Profile</h6><p>Custom theme on your profile</p></div>
-                    <span>+$2/mo</span>
+                    <span class="monthh">+$2/mo</span><span class="yearr">+$20/yr</span>
                 </div>
             </div>
             <div class="step-4">
-                <h2 class="head">Finishing up</h2>
+               <div class="1"> <h2 class="head">Finishing up</h2>
                 <p class="paragraph">Double-check everything looks OK before confirming</p>
+                <div class="chosen">
+                    <div class="time"><h5 class="chosenplan"><span>change</span></h5>
+                        <input type="button" class="price" value=""></div>
+                    <div class="add-ons" id="add-ons"><span>online service</span><input type="button" class="add-onsvalue" id="value1" value="+$1/mo"></div>
+                    <div class="add-ons" id="add-ons2"><span>larger storage</span><input type="button" class="add-onsvalue" id="value2" value="+$2/mo"></div>
+                    <div class="add-ons" id="add-ons3"><span>Customizable profile</span><input type="button" class="add-onsvalue" id="value3" value="+$2/mo"></div>
+                </div>
+                <div class="total"><span class="totaltext"></span> <p id="total"></p></div></div>
             </div>
-            <div class="btns"><span class="go-back">Go back</span>
-                <button class="next-step" onclick="formvalidate(); nextpage();">Next Step</button></div> 
+            <div class="step-5">
+                <img src="/assets/images/icon-thank-you.svg" alt="">
+                <h2 class="head">Thank you!</h2>
+                <p class="paragraph">Thanks for confirming your subscription!
+                     We hope you have fun using our platform. If you ever need support, 
+                     please feel free to email us at support@loremgaming.com.</p>
+            </div>
+            <div class="btns"><span class="go-back"  onclick="goback()">Go back</span>
+                <button class="next-step" onclick="formvalidate(); nextpage();">Next Step</button>
+                <button class="confirm-btn">Confirm</button>
+            </div> 
         </main>        
     </section>
 </div>

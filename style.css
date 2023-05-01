@@ -121,14 +121,13 @@ button{
     font-size: 11px;
     margin-right: 10px;
 }
-
 .active {
     color: black;
     background-color: hsl(206, 94%, 87%);
 }
-/* .step-1 {
+ /* .step-1 {
     display: none;
-}  */
+}    */
 
 .step-2 {
     display: none;
@@ -137,6 +136,16 @@ button{
     display: none;
 } 
 .step-4 {
+    display: none;
+}
+
+
+.step-5 {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     display: none;
 }
 .plans {
@@ -265,6 +274,8 @@ input:checked + .slider::before{
     font-family: "regularfont";
     margin: 0px;
     color: hsl(231, 11%, 63%);
+    font-family: "mediumfont";
+    font-size: 13px;
     visibility: hidden;
 }
 .go-back:hover {
@@ -314,4 +325,90 @@ input:checked + .slider::before{
 .selected {
     background-color: hsl(231, 100%, 99%);
     border: 1px solid hsl(243, 100%, 62%);
+}
+.yearr {
+    display: none;
+}
+/* step-4 design */
+.chosen {
+    background-color: hsl(217, 100%, 97%);
+    padding: 20px;
+    width: 25vw;
+}
+.chosen div {
+    justify-content: space-between;
+    align-items: center;
+}
+.chosenplan {
+    font-family: "regularfont";
+    font-size: 13px;
+    color: hsl(213, 96%, 18%);
+}
+.chosenplan span {
+    color: hsl(231, 11%, 63%);
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+.chosenplan span:hover {
+    color: hsl(243, 100%, 62%);
+}
+.price {
+    font-family: "mediumfont";
+    font-size: 11px;
+    border: none;
+    background-color: hsl(217, 100%, 97%);
+}
+.time {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(231, 11%, 63%);
+}
+.add-ons {
+    padding: 10px 0 0 0;
+    display: none;
+}
+.add-ons span {
+    color: hsl(231, 11%, 63%);
+    font-family: "regularfont";
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.add-onsvalue {
+    font-family: "mediumfont";
+    font-size: 9px;
+    border: none;
+    background-color: hsl(217, 100%, 97%);
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.total span {
+    color: hsl(231, 11%, 63%);
+    font-family: "regularfont";
+    font-size: 12px;
+}
+.total p {
+    color: hsl(243, 100%, 62%);
+    font-family: "mediumfont";
+}
+.confirm-btn {
+    background-color: hsl(243, 100%, 62%);
+    border: none;
+    font-family: "regularfont";
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.confirm-btn:hover {
+    opacity: .5;
 }
