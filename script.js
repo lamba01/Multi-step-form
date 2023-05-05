@@ -18,6 +18,8 @@ let num1 = document.getElementById("number1")
 let num2 = document.getElementById("number2")
 let num3 = document.getElementById("number3")
 let num4 = document.getElementById("number4")
+
+
 // toggle between yearly and monthly
 function toggledisplay() {
     let year = document.querySelector('.yearly')
@@ -30,7 +32,7 @@ function toggledisplay() {
             monthly[i].style.display = 'none'           
         }   
         for (let index = 0; index < card.length; index++) { 
-            card[index].style.height = "27vh"          
+            card[index].style.height = "25vh"          
         }  
         year.style.color = 'hsl(213, 96%, 18%)'
         month.style.color = 'hsl(231, 11%, 63%)'
@@ -42,7 +44,7 @@ function toggledisplay() {
             monthly[i].style.display = 'block'            
         }  
         for (let index = 0; index < card.length; index++) { 
-            card[index].style.height = "25vh"          
+            card[index].style.height = "22vh"          
         } 
         year.style.color = 'hsl(231, 11%, 63%)'
         month.style.color = 'hsl(213, 96%, 18%)'   
@@ -171,7 +173,7 @@ function formvalidate() {
 function nextpage() {
     // display "go back" button
     var backbtn = document.querySelector('.go-back')
-    if(step1.style.display === 'none'){
+    if(step1.style.display == 'none'){
         backbtn.style.visibility = 'visible'
     }
     // step2 verification
@@ -206,9 +208,6 @@ function nextpage() {
     if(step4.style.display === 'block'){
         btn.style.display = 'block'
         nextstepbtn.style.display = 'none'
-    }else {
-        btn.style.display = 'none'
-        nextstepbtn.style.display = 'block'
     }
         // To display Add-ons selected
         let check1 = document.getElementById("add-ons") 
@@ -309,12 +308,13 @@ function nextpage() {
         }  
     }
 
-    // function submit() {
-        
-    //     if(step4.style.display == 'block'){
-            
-    //     } 
-    // }
+    function submit() {
+        step4.style.display = 'none'
+        step5.style.display = 'flex'
+        let dd = document.querySelector('.btns')
+        dd.style.display = 'none'
+    }
+
     function goback() {
         if(step2.style.display == 'block'){
             step2.style.display = 'none'
@@ -344,5 +344,12 @@ function nextpage() {
             num4.classList.remove("active")
             num3.classList.add("active")
         }
+        btn.style.display = 'none'
+        nextstepbtn.style.display = 'block'
     }
+
+ 
+    
+
+
 

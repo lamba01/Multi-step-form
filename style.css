@@ -56,14 +56,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
-.paragraph {
-    padding-bottom: 20px;
-    color: hsl(231, 11%, 63%);
-    font-family: "regularfont";
-    font-size: 12px;
-}
 .userdata {
-    width: 95%;
+    width: 100%;
     height: 20px;
     padding: 10px;
     border-radius: 5px;
@@ -76,6 +70,12 @@ main {
 .head {
     color: hsl(213, 96%, 18%);
     font-family: "boldfont";
+}
+.paragraph {
+    padding-bottom: 20px;
+    color: hsl(231, 11%, 63%);
+    font-family: "regularfont";
+    font-size: 12px;
 }
 label {
     color: hsl(213, 96%, 18%);
@@ -128,7 +128,6 @@ button{
  /* .step-1 {
     display: none;
 }    */
-
 .step-2 {
     display: none;
 }  
@@ -138,14 +137,16 @@ button{
 .step-4 {
     display: none;
 }
-
-
+.display {
+    display: block;
+}
 .step-5 {
     margin: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
+    align-items: center; 
+    width: 70%;
     display: none;
 }
 .plans {
@@ -155,8 +156,8 @@ button{
     color: hsl(231, 11%, 63%);
 }
 .card {
-    width: 10vw;
-    height: 25vh;
+    width: 8vw;
+    height: 22vh;
     border: solid hsl(231, 11%, 63%) 1px;
     border-radius: 10px;
     margin-right: 10px;

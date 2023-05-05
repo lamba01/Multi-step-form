@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="active()">
+    <title>Multi-step Form</title>
     <div class="bodycontent">
     <section>       
         <aside>         
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <div class="step-4">
-               <div class="1"> <h2 class="head">Finishing up</h2>
+                <h2 class="head">Finishing up</h2>
                 <p class="paragraph">Double-check everything looks OK before confirming</p>
                 <div class="chosen">
                     <div class="time"><h5 class="chosenplan"><span>change</span></h5>
@@ -80,18 +81,18 @@
                     <div class="add-ons" id="add-ons2"><span>larger storage</span><input type="button" class="add-onsvalue" id="value2" value="+$2/mo"></div>
                     <div class="add-ons" id="add-ons3"><span>Customizable profile</span><input type="button" class="add-onsvalue" id="value3" value="+$2/mo"></div>
                 </div>
-                <div class="total"><span class="totaltext"></span> <p id="total"></p></div></div>
+                <div class="total"><span class="totaltext"></span> <p id="total"></p></div>
             </div>
             <div class="step-5">
                 <img src="/assets/images/icon-thank-you.svg" alt="">
-                <h2 class="head">Thank you!</h2>
-                <p class="paragraph">Thanks for confirming your subscription!
-                     We hope you have fun using our platform. If you ever need support, 
+                <h2 class="head">Thank you! </h2>
+                 <p class="paragraph">Thanks for confirming your subscription! 
+                    We hope you have fun using our platform. If you ever need support,
                      please feel free to email us at support@loremgaming.com.</p>
             </div>
-            <div class="btns"><span class="go-back"  onclick="goback()">Go back</span>
+            <div class="btns"><span class="go-back" id="prev-btn" onclick="goback()">Go back</span>
                 <button class="next-step" onclick="formvalidate(); nextpage();">Next Step</button>
-                <button class="confirm-btn">Confirm</button>
+                <button class="confirm-btn" onclick="submit()">Confirm</button>
             </div> 
         </main>        
     </section>
