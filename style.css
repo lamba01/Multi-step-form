@@ -328,7 +328,7 @@ input:checked + .slider::before{
 .chosen {
     background-color: hsl(217, 100%, 97%);
     padding: 20px;
-    width: 25vw;
+    width: 90%;
 }
 .chosen div {
     justify-content: space-between;
@@ -382,7 +382,7 @@ input:checked + .slider::before{
 .total {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 0px 0px 20px;
 }
 .total span {
     color: hsl(231, 11%, 63%);
@@ -417,6 +417,12 @@ input:checked + .slider::before{
     .step3-divs {
         width: 100%;
     }
+    .chosen {
+        width: 80%;
+    }
+    .total p {
+        margin-right: 25px;
+    }
 }
 @media only screen and (min-height: 1000px){
     section {
@@ -442,7 +448,6 @@ input:checked + .slider::before{
     }
 }
 @media only screen and (max-width: 480px){
-   /* step-2 */
     section {
         display: block;
         padding: 0px;
@@ -472,13 +477,12 @@ input:checked + .slider::before{
     .number {
         margin-right: 10px;
     }
-    .step-1, .step-2, .step-3, .step-4 {
+    .step-1, .step-2, .step-3, .step-4, .step-5 {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -30%);
         width: 80vw;
-        /* height: 45vh; */
         border-radius: 10px;
         padding: 20px 10px;
         background-color: hsl(0, 0%, 100%);
@@ -488,12 +492,12 @@ input:checked + .slider::before{
     }
     .next-step, .confirm-btn {
         position: fixed;
-        bottom: 0px;
+        bottom: 50px;
         right: 25px;
     }
     .go-back {
         position: fixed;
-        bottom: 15px;
+        bottom: 55px;
         left: 25px;
     }
     .plans {
@@ -508,9 +512,6 @@ input:checked + .slider::before{
         width: 90%;
         margin-bottom: 10px;
     }
-    /* .step-2 {
-        height: 50vh;
-    } */
     .step-2img {
         margin-right: 10px;
     }
@@ -523,7 +524,7 @@ input:checked + .slider::before{
         height: 4vh;
     }
     .step3-divs {
-        width: 85%;
+        width: 90%;
         padding-left: 5px;
         margin-left: 0px;
     }
