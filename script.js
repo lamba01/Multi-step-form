@@ -31,9 +31,6 @@ function toggledisplay() {
         for (let i = 0; i < monthly.length; i++) {
             monthly[i].style.display = 'none'           
         }   
-        for (let index = 0; index < card.length; index++) { 
-            card[index].style.height = "25vh"          
-        }  
         year.style.color = 'hsl(213, 96%, 18%)'
         month.style.color = 'hsl(231, 11%, 63%)'
     }else {
@@ -42,10 +39,7 @@ function toggledisplay() {
         }
         for (let i = 0; i < monthly.length; i++) {
             monthly[i].style.display = 'block'            
-        }  
-        for (let index = 0; index < card.length; index++) { 
-            card[index].style.height = "22vh"          
-        } 
+        }   
         year.style.color = 'hsl(231, 11%, 63%)'
         month.style.color = 'hsl(213, 96%, 18%)'   
     }

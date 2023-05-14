@@ -19,18 +19,18 @@
     position: relative;
     display: block;
 }
+title {
+    display: none;
+}
 body {
     background-color: hsl(217, 100%, 97%);
-}
-.bodycontent {
-    position: relative;
     height: 100vh;
 }
 section {
     display: flex;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 35px 15px 15px; 
     height: 70vh;
     width: 55vw;
     position: absolute;
@@ -48,7 +48,7 @@ aside {
     background-repeat: no-repeat;
     left: 0px;  
     width: 30%;
-    margin-right: 5vw;
+    margin-right: 3vw;
 }
 main {
     margin-top: 20px;
@@ -125,15 +125,15 @@ button{
     color: black;
     background-color: hsl(206, 94%, 87%);
 }
- /* .step-1 {
+ .step-1 {
     display: none;
-}    */
+}   
 .step-2 {
     display: none;
 }  
-.step-3 {
+/* .step-3 {
     display: none;
-} 
+}  */
 .step-4 {
     display: none;
 }
@@ -156,11 +156,15 @@ button{
     color: hsl(231, 11%, 63%);
 }
 .card {
-    width: 8vw;
+    width: 10vw;
     height: 22vh;
     border: solid hsl(231, 11%, 63%) 1px;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 .card:hover {
     border: solid 1px hsl(243, 100%, 62%);
@@ -170,16 +174,6 @@ button{
     background-color: hsl(217, 100%, 97%);
     border: solid 1px hsl(243, 100%, 62%);
 } 
-.step-2img {
-    position: relative;
-    top: 10px;
-    left: 10px;
-}
-.step-2text {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-}
 .yearly-info {
     display: none;
 }
@@ -297,7 +291,7 @@ input:checked + .slider::before{
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
-    width: 25vw;
+    width: 30vw;
     cursor: pointer;
 }
 .step3-divs:hover {
@@ -412,4 +406,128 @@ input:checked + .slider::before{
 }
 .confirm-btn:hover {
     opacity: .5;
+}
+@media only screen and (max-width: 767px) {
+    section {
+        width: 70vw;
+    }
+    .card {
+        width: 14vw;
+    }
+    .step3-divs {
+        width: 100%;
+    }
+}
+@media only screen and (min-height: 1000px){
+    section {
+        height: 40vh;
+    }
+    .card {
+        height: 14vh;
+        width: 9vw;
+    }
+}
+@media only screen and (max-height: 360px){
+    section {
+        height: 100vh;
+        width: 80vw;
+    }
+    .card {
+        height: 35vh;
+    }
+}
+@media only screen and (max-width: 600px){
+    section {
+        width: 80vw;
+    }
+}
+@media only screen and (max-width: 480px){
+   /* step-2 */
+    section {
+        display: block;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(217, 100%, 97%);
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        width: 100%;
+        height: 30%;
+        background-image: url(/assets/images/bg-sidebar-mobile.svg);
+        padding-bottom: 20px;
+    }
+    .steps, .info {
+        display: none;
+    }
+    .container {
+        margin: 50px 0px 0px 0px;
+    }
+    .number {
+        margin-right: 10px;
+    }
+    .step-1, .step-2, .step-3, .step-4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        width: 80vw;
+        height: 45vh;
+        border-radius: 10px;
+        padding: 20px 10px;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .userdata {
+        width: 90%;
+    }
+    .next-step, .confirm-btn {
+        position: fixed;
+        bottom: 0px;
+        right: 25px;
+    }
+    .go-back {
+        position: fixed;
+        bottom: 15px;
+        left: 25px;
+    }
+    .plans {
+        display: block;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .step-2 {
+        height: 50vh;
+    }
+    .step-2img {
+        margin-right: 10px;
+    }
+    .step3-divs {
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .card {
+        height: 4vh;
+    }
+    .step3-divs {
+        width: 85%;
+        padding-left: 5px;
+        margin-left: 0px;
+    }
+    .step3-divs span {
+        right: 5px;
+    }
 }
