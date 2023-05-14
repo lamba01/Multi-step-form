@@ -125,15 +125,15 @@ button{
     color: black;
     background-color: hsl(206, 94%, 87%);
 }
- .step-1 {
+ /* .step-1 {
     display: none;
-}   
+}    */
 .step-2 {
     display: none;
 }  
-/* .step-3 {
+.step-3 {
     display: none;
-}  */
+} 
 .step-4 {
     display: none;
 }
