@@ -30,7 +30,7 @@ section {
     display: flex;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
-    padding: 15px 35px 15px 15px; 
+    padding: 15px 15px 15px 15px; 
     height: 70vh;
     width: 55vw;
     position: absolute;
@@ -52,12 +52,9 @@ aside {
 }
 main {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .userdata {
-    width: 100%;
+    width: 90%;
     height: 20px;
     padding: 10px;
     border-radius: 5px;
@@ -125,21 +122,18 @@ button{
     color: black;
     background-color: hsl(206, 94%, 87%);
 }
- /* .step-1 {
+ .step-1 {
     display: none;
-}    */
-.step-2 {
+}   
+.activestep {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.step {
     display: none;
 }  
-.step-3 {
-    display: none;
-} 
-.step-4 {
-    display: none;
-}
-.display {
-    display: block;
-}
 .step-5 {
     margin: auto;
     display: flex;
@@ -156,7 +150,7 @@ button{
     color: hsl(231, 11%, 63%);
 }
 .card {
-    width: 10vw;
+    width: 7vw;
     height: 22vh;
     border: solid hsl(231, 11%, 63%) 1px;
     border-radius: 10px;
@@ -255,7 +249,7 @@ input:checked + .slider::before{
 .monthly {
     color: hsl(213, 96%, 18%);
 }
-.next-step {
+.next-step, .step2btn, .step3btn {
     background-color: hsl(213, 96%, 18%);
     border: none;
     font-family: "regularfont";
@@ -265,13 +259,16 @@ input:checked + .slider::before{
     border-radius: 5px;
     cursor: pointer;
 }
+.step1btn {
+    display: flex;
+    justify-content: flex-end;
+}
 .go-back {
     font-family: "regularfont";
     margin: 0px;
     color: hsl(231, 11%, 63%);
     font-family: "mediumfont";
     font-size: 13px;
-    visibility: hidden;
 }
 .go-back:hover {
     color: hsl(213, 96%, 18%);
@@ -282,7 +279,6 @@ input:checked + .slider::before{
     justify-content: space-between;
     align-items: center;
 }
-
 /* step 3 container design */
 .step3-divs {
     display: flex;
@@ -291,7 +287,7 @@ input:checked + .slider::before{
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
-    width: 30vw;
+    width: 25vw;
     cursor: pointer;
 }
 .step3-divs:hover {
@@ -328,7 +324,7 @@ input:checked + .slider::before{
 .chosen {
     background-color: hsl(217, 100%, 97%);
     padding: 20px;
-    width: 90%;
+    width: 25vw;
 }
 .chosen div {
     justify-content: space-between;
@@ -402,20 +398,22 @@ input:checked + .slider::before{
     padding: 0px;
     border-radius: 5px;
     cursor: pointer;
-    display: none;
 }
 .confirm-btn:hover {
     opacity: .5;
 }
 @media only screen and (max-width: 767px) {
     section {
-        width: 70vw;
+        width: 80vw;
+    }
+    .userdata {
+        width: 80%;
     }
     .card {
-        width: 14vw;
+        width: 12vw;
     }
     .step3-divs {
-        width: 100%;
+        width: 90%;
     }
     .chosen {
         width: 80%;
@@ -427,10 +425,20 @@ input:checked + .slider::before{
 @media only screen and (min-height: 1000px){
     section {
         height: 40vh;
+        width: 70vw;
+    }
+    .userdata {
+        width: 90%;
     }
     .card {
-        height: 14vh;
+        height: 12vh;
         width: 9vw;
+    }
+    .step3-divs {
+        width: 100%;
+    }
+    .chosen {
+        width: 90%;
     }
 }
 @media only screen and (max-height: 360px){
@@ -477,28 +485,26 @@ input:checked + .slider::before{
     .number {
         margin-right: 10px;
     }
-    .step-1, .step-2, .step-3, .step-4, .step-5 {
+    main { 
+        background-color: hsl(0, 0%, 100%);
+        width: 80vw;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -30%);
-        width: 80vw;
+        margin: 0px;
+        padding: 20px;
         border-radius: 10px;
-        padding: 20px 10px;
-        background-color: hsl(0, 0%, 100%);
+    }
+    .step-1 {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .next-step, .step2btn, .step3btn, .confirm-btn {
+        margin: 20px 0px 0px 0px;
     }
     .userdata {
         width: 90%;
-    }
-    .next-step, .confirm-btn {
-        position: fixed;
-        bottom: 50px;
-        right: 25px;
-    }
-    .go-back {
-        position: fixed;
-        bottom: 55px;
-        left: 25px;
     }
     .plans {
         display: block;
@@ -519,6 +525,11 @@ input:checked + .slider::before{
         width: 85%;
     }
 }
+@media only screen and (max-width: 376px) {
+    main {
+        top: 35%;
+    }
+} 
 @media only screen and (max-width: 320px) {
     .card {
         height: 4vh;
@@ -530,5 +541,8 @@ input:checked + .slider::before{
     }
     .step3-divs span {
         right: 5px;
+    }
+    main {
+        top: 40%;
     }
 }

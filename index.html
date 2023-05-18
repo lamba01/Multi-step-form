@@ -20,7 +20,7 @@
             <div><span class="steps">STEP 4</span><p class="info">SUMMARY</p></div></div>
         </aside>  
         <main>
-           <div class="step-1"> <h2 class="head">Personal info</h2>
+           <div class="step-1"><div> <h2 class="head">Personal info</h2>
             <p class="paragraph">Please provide your name, email address, and phone number</p>
             <form action="" > 
                 <label for="name">Name <span class="errormsg" id="error1">This field is required</span></label>         
@@ -30,8 +30,9 @@
                 <label for="phone-number">Phone Number <span class="errormsg" id="phone">Invalid format</span> <span class="errormsg" id="error3">This field is required</span></label>
                 <input type="text" oninput="errormsg3()" id="phone-number" class="userdata" required placeholder=" e.g. +1 234 567 890">               
             </form></div>
+            <div class="step1btn"><button class="next-step" onclick="formvalidate();">Next Step</button></div></div>
             <div class="step-2">
-                <h2 class="head">Select your plan</h2>
+                <div><h2 class="head">Select your plan</h2>
                 <p class="paragraph">You have the option of monthly or yearly billing</p>
                 <div class="plans"><div class="card"><div><img src="/assets/images/icon-arcade.svg" class="step-2img" alt=""></div>
                 <div class="step-2text"><h5 class="head">Arcade</h5><span class="amt">$9/mo</span>
@@ -49,10 +50,12 @@
                     <span class="slider round"></span>
                     </label> 
                     <span class="yearly">Yearly</span>
-                </div>
+                </div></div>
+                <div class="btns"><span class="go-back" id="prev-btn" onclick="goback1()">Go back</span>               
+                <button class="step2btn" onclick="nextpage();">Next Step</button></div>
             </div>
             <div class="step-3">
-                <h2 class="head">Pick add-ons</h2>
+                <div><h2 class="head">Pick add-ons</h2>
                 <p class="paragraph">Add-ons help enhance your gaming experience.</p>
                 <div class="step3-divs" id="step3div1">
                     <input type="checkbox" class="checkbox3" name="" id="checkbox1">
@@ -68,19 +71,23 @@
                     <input type="checkbox" class="checkbox3" name="" id="checkbox3">
                     <div><h6 class="step3main">Customizable Profile</h6><p>Custom theme on your profile</p></div>
                     <span class="monthh">+$2/mo</span><span class="yearr">+$20/yr</span>
-                </div>
+                </div></div>
+                <div class="btns"><span class="go-back" id="prev-btn" onclick="goback2()">Go back</span>
+                    <button class="step3btn" onclick="step3verification();">Next Step</button></div>
             </div>
             <div class="step-4">
-                <h2 class="head">Finishing up</h2>
+                <div><h2 class="head">Finishing up</h2>
                 <p class="paragraph">Double-check everything looks OK before confirming</p>
                 <div class="chosen">
                     <div class="time"><h5 class="chosenplan"><span>change</span></h5>
                         <input type="button" class="price" value=""></div>
-                    <div class="add-ons" id="add-ons"><span>online service</span><input type="button" class="add-onsvalue" id="value1" value="+$1/mo"></div>
-                    <div class="add-ons" id="add-ons2"><span>larger storage</span><input type="button" class="add-onsvalue" id="value2" value="+$2/mo"></div>
-                    <div class="add-ons" id="add-ons3"><span>Customizable profile</span><input type="button" class="add-onsvalue" id="value3" value="+$2/mo"></div>
+                    <div class="add-ons" id="add-ons"><span>online service</span><input type="button" class="add-onsvalue" id="value1" ></div>
+                    <div class="add-ons" id="add-ons2"><span>larger storage</span><input type="button" class="add-onsvalue" id="value2" ></div>
+                    <div class="add-ons" id="add-ons3"><span>Customizable profile</span><input type="button" class="add-onsvalue" id="value3"></div>
                 </div>
-                <div class="total"><span class="totaltext"></span> <p id="total"></p></div>
+                <div class="total"><span class="totaltext"></span> <p id="total"></p></div></div>
+                <div class="btns"><span class="go-back" id="prev-btn" onclick="goback3()">Go back</span>
+                    <button class="confirm-btn" onclick="submit()">Confirm</button></div>
             </div>
             <div class="step-5">
                 <img src="/assets/images/icon-thank-you.svg" alt="">
@@ -88,11 +95,7 @@
                  <p class="paragraph">Thanks for confirming your subscription! 
                     We hope you have fun using our platform. If you ever need support,
                      please feel free to email us at support@loremgaming.com.</p>
-            </div>
-            <div class="btns"><span class="go-back" id="prev-btn" onclick="goback()">Go back</span>
-                <button class="next-step" onclick="formvalidate(); nextpage();">Next Step</button>
-                <button class="confirm-btn" onclick="submit()">Confirm</button>
-            </div> 
+            </div>           
         </main>        
     </section>
 <script src="/script.js"></script>

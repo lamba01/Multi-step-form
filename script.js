@@ -8,17 +8,16 @@ var step2 = document.querySelector('.step-2')
 var step3 = document.querySelector('.step-3')
 var step4 = document.querySelector('.step-4')
 var step5 = document.querySelector('.step-5')
+var backbtn = document.querySelector('.go-back')
 let error1 = document.getElementById("error1")
 let error2 = document.getElementById("error2")
 let error3 = document.getElementById("error3")
 let mail = document.getElementById("mail")
 let btn = document.querySelector('.confirm-btn') 
-let nextstepbtn = document.querySelector('.next-step')
 let num1 = document.getElementById("number1")
 let num2 = document.getElementById("number2")
 let num3 = document.getElementById("number3")
 let num4 = document.getElementById("number4")
-
 
 // toggle between yearly and monthly
 function toggledisplay() {
@@ -45,7 +44,7 @@ function toggledisplay() {
     }
 }
 
-// adding acive cass to 'select your plan' cards in step2 
+// adding active cass to 'select your plan' cards in step2 
 for (var i = 0; i < card.length; i++) {
     card[i].addEventListener("click", function() {
       var current = document.getElementsByClassName("active2");
@@ -102,6 +101,10 @@ box3.addEventListener("click", function() {
 // set step 1 as default active step
 function active() {
         num1.classList.add("active")
+        step1.classList.add("activestep")
+        step2.classList.add("step")
+        step3.classList.add("step")
+        step4.classList.add("step")
 }
 
 // step 1 formvalidation
@@ -158,26 +161,22 @@ function formvalidate() {
 
         if(!alphabetRegex.test(form[2].value) && emailRegex.test(form[1].value) 
         && !form[0].value == "" && !form[2].value == ""){
-            step1.style.display = 'none'
-            step2.style.display = 'block'
+            step1.classList.remove("activestep")
+            step2.classList.replace("step", "activestep")
             num1.classList.remove("active")
             num2.classList.add("active")
         }
 }
 function nextpage() {
-    // display "go back" button
-    var backbtn = document.querySelector('.go-back')
-    if(step1.style.display == 'none'){
-        backbtn.style.visibility = 'visible'
-    }
+
     // step2 verification
         for (let index = 0; index < card.length; index++) {
             if (card[index].classList.contains("active2")){
-                step2.style.display = 'none'
-                step3.style.display = 'block'
+                step2.classList.replace("activestep", "step")
+                step3.classList.replace("step", "activestep")
                 num2.classList.remove("active")
                 num3.classList.add("active")
-            }      
+            }
         }
     let addonsyearly = document.querySelectorAll('.yearr')
     let addonsmonthly = document.querySelectorAll('.monthh')
@@ -188,20 +187,27 @@ function nextpage() {
         for (let i = 0; i < addonsmonthly.length; i++) {
             addonsmonthly[i].style.display = 'none'   
         }
+    } else {
+        for (let i = 0; i < addonsyearly.length; i++) {
+            addonsyearly[i].style.display = 'none'   
+        }
+        for (let i = 0; i < addonsmonthly.length; i++) {
+            addonsmonthly[i].style.display = 'block'   
+        }
     }
-    // step3 verification
+    }
+
+  
+    function step3verification() {
+         // step3 verification
     let step3check = document.querySelectorAll('.step3-divs')
     for (let i = 0; i < step3check.length; i++) {
         if(step3check[i].classList.contains("selected")){
-            step3.style.display = 'none'
-            step4.style.display = 'block'
+            step3.classList.replace("activestep", "step")
+            step4.classList.replace("step", "activestep")
             num3.classList.remove("active")
             num4.classList.add("active")
         }
-    }
-    if(step4.style.display === 'block'){
-        btn.style.display = 'block'
-        nextstepbtn.style.display = 'none'
     }
         // To display Add-ons selected
         let check1 = document.getElementById("add-ons") 
@@ -222,6 +228,8 @@ function nextpage() {
             if(input.checked){
                 addons1.value = "+$10/yr"
                 totalyear1 = "10"         
+            }else {
+                addons1.value = "$1/mo"
             }
         }else {
             check1.style.display = 'none'
@@ -234,6 +242,8 @@ function nextpage() {
             if(input.checked){
                 addons2.value = '+$20/yr'
                 totalyear2 = "20"              
+            }else {
+                addons2.value = "+$2/mo"
             }
         }else {
             check2.style.display = 'none'   
@@ -246,6 +256,8 @@ function nextpage() {
             if(input.checked){
                 addons3.value = '+$20/yr'
                 totalyear3 = "20"            
+            }else {
+                addons3.value = "+$2/mo"
             }
         }else {
             check3.style.display = 'none'
@@ -305,42 +317,36 @@ function nextpage() {
     function submit() {
         step4.style.display = 'none'
         step5.style.display = 'flex'
-        let dd = document.querySelector('.btns')
-        dd.style.display = 'none'
     }
 
-    function goback() {
-        if(step2.style.display == 'block'){
-            step2.style.display = 'none'
-            step1.style.display = 'block'
+    function goback1() {
+        if(step2.classList.contains("activestep")){
+            step2.classList.replace("activestep", "step")
+            step1.classList.add("activestep")
             num2.classList.remove("active")
             num1.classList.add("active")
-            for (let i = 0; i < card.length; i++) {
-                card[i].classList.remove("active2")              
-            }
         }
-        if(step3.style.display == 'block'){
-            step3.style.display = 'none'
-            step2.style.display = 'block'
-            let step3check = document.querySelectorAll('.step3-divs')
-            for (let i = 0; i < step3check.length; i++) {
-                step3check[i].classList.remove("selected")               
-            }
-            firstinput.checked = false
-            secondinput.checked = false
-            thirdinput.checked = false
+    }
+
+    function goback2() {
+        if(step3.classList.contains("activestep")){
+            step3.classList.replace("activestep", "step")
+            step2.classList.replace("step", "activestep")
             num3.classList.remove("active")
             num2.classList.add("active")
         }
-        if(step4.style.display == 'block'){
-            step4.style.display = 'none'
-            step3.style.display = 'block'
+    }
+    
+    function goback3() {
+        if(step4.classList.contains("activestep")){
+            step4.classList.replace("activestep", "step")
+            step3.classList.replace("step", "activestep")
             num4.classList.remove("active")
             num3.classList.add("active")
         }
-        btn.style.display = 'none'
-        nextstepbtn.style.display = 'block'
     }
+
+    
 
  
     
