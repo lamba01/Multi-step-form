@@ -336,7 +336,7 @@ function nextpage() {
             num2.classList.add("active")
         }
     }
-    
+
     function goback3() {
         if(step4.classList.contains("activestep")){
             step4.classList.replace("activestep", "step")
