@@ -8,6 +8,7 @@ A multi step form to test JavaScript capabilities. A frontend mentor challenge.
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -31,6 +32,10 @@ Users should be able to:
   - A field has been missed
   - The email address is not formatted correctly
   - A step is submitted, but no selection has been made
+ 
+### Screenshot
+
+![](./screenshot5.png)
 
 
 
