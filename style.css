@@ -1,552 +1,593 @@
 @font-face {
-    font-family: boldfont;
-    src: url(assets/fonts/Ubuntu-Bold.ttf);
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: mediumfont;
-    src: url(assets/fonts/Ubuntu-Medium.ttf);
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: regularfont;
-    src: url(assets/fonts/Ubuntu-Regular.ttf);
-    font-weight: 400;
-  }
-*{
-    padding: 0;
-    margin: 0;
-    position: relative;
-    display: block;
+  font-family: boldfont;
+  src: url(assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: mediumfont;
+  src: url(assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: regularfont;
+  src: url(assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: block;
 }
 title {
-    display: none;
+  display: none;
 }
 body {
-    background-color: hsl(217, 100%, 97%);
-    height: 100vh;
+  background-color: hsl(217, 100%, 97%);
+  height: 100vh;
 }
 section {
-    display: flex;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
-    padding: 15px 15px 15px 15px; 
-    height: 70vh;
-    width: 55vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 15px 15px 15px 15px;
+  height: 70vh;
+  width: 55vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .container {
-    display: flex; 
-    margin: 20px;
+  display: flex;
+  margin: 20px;
 }
 aside {
-    background-image: url("/assets/images/bg-sidebar-desktop.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    left: 0px;  
-    width: 30%;
-    margin-right: 3vw;
+  background-image: url("/assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0px;
+  width: 30%;
+  margin-right: 3vw;
 }
 main {
-    margin-top: 20px;
+  margin-top: 20px;
+  width: 70%;
 }
 .userdata {
-    width: 90%;
-    height: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    border-width: 1px;
-    cursor: pointer;
+  width: 94%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  cursor: pointer;
 }
 .userdata:hover {
-    border: 0.005rem solid blue;
+  border: 0.005rem solid blue;
 }
 .head {
-    color: hsl(213, 96%, 18%);
-    font-family: "boldfont";
+  color: hsl(213, 96%, 18%);
+  font-family: "boldfont";
 }
 .paragraph {
-    padding-bottom: 20px;
-    color: hsl(231, 11%, 63%);
-    font-family: "regularfont";
-    font-size: 12px;
+  padding-bottom: 20px;
+  color: hsl(231, 11%, 63%);
+  font-family: "regularfont";
+  font-size: 12px;
 }
 label {
-    color: hsl(213, 96%, 18%);
-    padding-top: 10px;
-    font-family: "mediumfont";
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
+  color: hsl(213, 96%, 18%);
+  padding-top: 10px;
+  font-family: "mediumfont";
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 .errormsg {
-    color: hsl(354, 84%, 57%);
-    font-family: "mediumfont";
-    display: none;
+  color: hsl(354, 84%, 57%);
+  font-family: "mediumfont";
+  display: none;
 }
 ::placeholder {
-    font-family: "regularfont";
+  font-family: "regularfont";
 }
-button{
-    border-radius: 8px;
-    height: 35px;
-    width: 90px;
-    color: hsl(243, 100%, 62%);  
+button {
+  border-radius: 8px;
+  height: 35px;
+  width: 90px;
+  color: hsl(243, 100%, 62%);
 }
-.steps{
-    font-size: 11px;
-    font-family: "regularfont";
-    color: hsl(231, 11%, 63%)
+.steps {
+  font-size: 11px;
+  font-family: "regularfont";
+  color: hsl(231, 11%, 63%);
 }
 .info {
-    font-size: 12px;
-    font-family: "boldfont";
-    color:hsl(0, 0%, 100%)
+  font-size: 12px;
+  font-family: "boldfont";
+  color: hsl(0, 0%, 100%);
 }
 .number {
-    width: 25px;
-    height: 25px;
-    color: white;
-    border-radius: 50%;
-    border: solid 1px hsl(229, 24%, 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 11px;
-    margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  color: white;
+  border-radius: 50%;
+  border: solid 1px hsl(229, 24%, 87%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  margin-right: 10px;
 }
 .active {
-    color: black;
-    background-color: hsl(206, 94%, 87%);
+  color: black;
+  background-color: hsl(206, 94%, 87%);
 }
- .step-1 {
-    display: none;
-}   
+.step-1 {
+  display: none;
+}
 .activestep {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 90%;
 }
 .step {
-    display: none;
-}  
+  display: none;
+}
 .step-5 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    display: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.step-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
 }
 .plans {
-    display: flex;
+  display: flex;
+  height: 60%;
 }
 .aa {
-    color: hsl(231, 11%, 63%);
+  color: hsl(231, 11%, 63%);
 }
 .card {
-    width: 7vw;
-    height: 22vh;
-    border: solid hsl(231, 11%, 63%) 1px;
-    border-radius: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
+  width: 30%;
+  height: 100%;
+  border: solid hsl(231, 11%, 63%) 1px;
+  border-radius: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card:last-child {
+  margin: 0;
 }
 .card:hover {
-    border: solid 1px hsl(243, 100%, 62%);
-    cursor: pointer;
+  border: solid 1px hsl(243, 100%, 62%);
+  cursor: pointer;
 }
 .active2 {
-    background-color: hsl(217, 100%, 97%);
-    border: solid 1px hsl(243, 100%, 62%);
-} 
+  background-color: hsl(217, 100%, 97%);
+  border: solid 1px hsl(243, 100%, 62%);
+}
 .error {
-    border-color: red;
+  border-color: red;
 }
 .yearly-info {
-    display: none;
+  display: none;
 }
-.amt, .yearly-amt {
-    color: hsl(231, 11%, 63%);
-    font-family: "regularfont";
-    font-size: 13px;
+.amt,
+.yearly-amt {
+  color: hsl(231, 11%, 63%);
+  font-family: "regularfont";
+  font-size: 13px;
 }
 .yearly-info p {
-    color: hsl(213, 96%, 18%);
-    font-family: "mediumfont";
-    font-size: 10px;
-    
+  color: hsl(213, 96%, 18%);
+  font-family: "mediumfont";
+  font-size: 10px;
 }
 /* Toggle Slide */
-.switch{
-    position: relative;
-    display: inline-block;
-    width: 35px;
-    height: 7px;
-    margin: 0px 20px;
-} 
-.switch input{
-    opacity: 0;
-    width: 0;
-    height: 0;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 7px;
+  margin: 0px 20px;
 }
-.slider{
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsl(213, 96%, 18%);
-    -webkit-transition: .4s;
-    transition: .4s;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.slider::before{
-    position: absolute;
-    content: "";
-    height: 11px;
-    width: 11px;
-    left: 4px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-input:focus + .slider{
-    box-shadow: 0 0 1px #2196f3;
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-input:checked + .slider::before{
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px);
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
-.slider.round{
-    border-radius: 30px;
+input:checked + .slider::before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
 }
-.slider.round::before{
-    border-radius: 60%;
+.slider.round {
+  border-radius: 30px;
+}
+.slider.round::before {
+  border-radius: 60%;
 }
 .timeframe {
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    background-color: hsl(229, 24%, 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: hsl(229, 24%, 87%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
 }
- .yearly {
-    color: hsl(231, 11%, 63%);
-    font-family: "regularfont";
-    font-size: 14px;
+.yearly {
+  color: hsl(231, 11%, 63%);
+  font-family: "regularfont";
+  font-size: 14px;
 }
 .monthly {
-    color: hsl(213, 96%, 18%);
+  color: hsl(213, 96%, 18%);
 }
-.next-step, .step2btn, .step3btn {
-    background-color: hsl(213, 96%, 18%);
-    border: none;
-    font-family: "regularfont";
-    color: white;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 5px;
-    cursor: pointer;
+.next-step,
+.step2btn,
+.step3btn {
+  background-color: hsl(213, 96%, 18%);
+  border: none;
+  font-family: "regularfont";
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .step1btn {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 .go-back {
-    font-family: "regularfont";
-    margin: 0px;
-    color: hsl(231, 11%, 63%);
-    font-family: "mediumfont";
-    font-size: 13px;
+  font-family: "regularfont";
+  margin: 0px;
+  color: hsl(231, 11%, 63%);
+  font-family: "mediumfont";
+  font-size: 13px;
 }
 .go-back:hover {
-    color: hsl(213, 96%, 18%);
-    cursor: pointer;
+  color: hsl(213, 96%, 18%);
+  cursor: pointer;
 }
 .btns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* step 3 container design */
 .step3-divs {
-    display: flex;
-    align-items: center;
-    border: 1px hsl(231, 11%, 63%) solid;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    width: 25vw;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px hsl(231, 11%, 63%) solid;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+  width: 90%;
+  cursor: pointer;
 }
 .step3-divs:hover {
-    border: 1px hsl(243, 100%, 62%) solid;
+  border: 1px hsl(243, 100%, 62%) solid;
 }
 .step3-divs input {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 .step3main {
-    font-family: "regularfont";
-    font-size: 14px;
-    color: hsl(213, 96%, 18%);
+  font-family: "regularfont";
+  font-size: 14px;
+  color: hsl(213, 96%, 18%);
 }
-.step3-divs div p{
-    font-family: "regularfont";
-    color: hsl(231, 11%, 63%);
-    font-size: 12px;
+.step3-divs div p {
+  font-family: "regularfont";
+  color: hsl(231, 11%, 63%);
+  font-size: 12px;
 }
 .step3-divs span {
-    font-family: "mediumfont";
-    font-size: 12px;
-    color: hsl(243, 100%, 62%);
-    position: absolute;
-    right: 20px;
+  font-family: "mediumfont";
+  font-size: 12px;
+  color: hsl(243, 100%, 62%);
+  position: absolute;
+  right: 20px;
 }
 .selected {
-    background-color: hsl(231, 100%, 99%);
-    border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(231, 100%, 99%);
+  border: 1px solid hsl(243, 100%, 62%);
 }
 .yearr {
-    display: none;
+  display: none;
 }
 /* step-4 design */
 .chosen {
-    background-color: hsl(217, 100%, 97%);
-    padding: 20px;
-    width: 25vw;
+  background-color: hsl(217, 100%, 97%);
+  padding: 20px;
+  width: 88%;
 }
 .chosen div {
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .chosenplan {
-    font-family: "regularfont";
-    font-size: 13px;
-    color: hsl(213, 96%, 18%);
+  font-family: "regularfont";
+  font-size: 13px;
+  color: hsl(213, 96%, 18%);
 }
 .chosenplan span {
-    color: hsl(231, 11%, 63%);
-    font-size: 11px;
-    font-weight: 300;
-    text-transform: capitalize;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-    margin: 0;
+  color: hsl(231, 11%, 63%);
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
 }
 .chosenplan span:hover {
-    color: hsl(243, 100%, 62%);
+  color: hsl(243, 100%, 62%);
 }
 .price {
-    font-family: "mediumfont";
-    font-size: 11px;
-    border: none;
-    background-color: hsl(217, 100%, 97%);
+  font-family: "mediumfont";
+  font-size: 11px;
+  border: none;
+  background-color: hsl(217, 100%, 97%);
 }
 .time {
-    display: flex;
-    padding-bottom: 20px;
-    border-bottom: 1px solid hsl(231, 11%, 63%);
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(231, 11%, 63%);
 }
 .add-ons {
-    padding: 10px 0 0 0;
-    display: none;
+  padding: 10px 0 0 0;
+  display: none;
 }
 .add-ons span {
-    color: hsl(231, 11%, 63%);
-    font-family: "regularfont";
-    font-size: 12px;
-    text-transform: capitalize;
+  color: hsl(231, 11%, 63%);
+  font-family: "regularfont";
+  font-size: 12px;
+  text-transform: capitalize;
 }
 .add-onsvalue {
-    font-family: "mediumfont";
-    font-size: 9px;
-    border: none;
-    background-color: hsl(217, 100%, 97%);
+  font-family: "mediumfont";
+  font-size: 9px;
+  border: none;
+  background-color: hsl(217, 100%, 97%);
 }
 .total {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0px 0px 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px 0px 20px;
 }
 .total span {
-    color: hsl(231, 11%, 63%);
-    font-family: "regularfont";
-    font-size: 12px;
+  color: hsl(231, 11%, 63%);
+  font-family: "regularfont";
+  font-size: 12px;
 }
 .total p {
-    color: hsl(243, 100%, 62%);
-    font-family: "mediumfont";
+  color: hsl(243, 100%, 62%);
+  font-family: "mediumfont";
 }
 .confirm-btn {
-    background-color: hsl(243, 100%, 62%);
-    border: none;
-    font-family: "regularfont";
-    color: white;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: hsl(243, 100%, 62%);
+  border: none;
+  font-family: "regularfont";
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .confirm-btn:hover {
-    opacity: .5;
+  opacity: 0.5;
+}
+.lds-dual-ring {
+  display: none;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  section {
+    height: 40vh;
+    width: 70vw;
+  }
+  .userdata {
+    width: 93%;
+  }
+  .card {
+    width: 30%;
+  }
+  .step3-divs {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1200px) and (min-height: 800px) {
+  section {
+    height: 60vh;
+    width: 45vw;
+  }
 }
 @media only screen and (max-width: 767px) {
-    section {
-        width: 80vw;
-    }
-    .userdata {
-        width: 80%;
-    }
-    .card {
-        width: 12vw;
-    }
-    .step3-divs {
-        width: 90%;
-    }
-    .chosen {
-        width: 80%;
-    }
-    .total p {
-        margin-right: 25px;
-    }
+  section {
+    width: 90vw;
+  }
 }
-@media only screen and (min-height: 1000px){
-    section {
-        height: 40vh;
-        width: 70vw;
-    }
-    .userdata {
-        width: 90%;
-    }
-    .card {
-        height: 12vh;
-        width: 9vw;
-    }
-    .step3-divs {
-        width: 100%;
-    }
-    .chosen {
-        width: 90%;
-    }
-}
-@media only screen and (max-height: 360px){
-    section {
-        height: 100vh;
-        width: 80vw;
-    }
-    .card {
-        height: 35vh;
-    }
-}
-@media only screen and (max-width: 600px){
-    section {
-        width: 80vw;
-    }
-}
-@media only screen and (max-width: 480px){
-    section {
-        display: block;
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-        background-color: hsl(217, 100%, 97%);
-        position: relative;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-    aside {
-        display: flex;
-        justify-content: center;
-        margin: 0px;
-        width: 100%;
-        height: 30%;
-        background-image: url(/assets/images/bg-sidebar-mobile.svg);
-        padding-bottom: 20px;
-    }
-    .steps, .info {
-        display: none;
-    }
-    .container {
-        margin: 50px 0px 0px 0px;
-    }
-    .number {
-        margin-right: 10px;
-    }
-    main { 
-        background-color: hsl(0, 0%, 100%);
-        width: 80vw;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -30%);
-        margin: 0px;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .step-1 {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .next-step, .step2btn, .step3btn, .confirm-btn {
-        margin: 20px 0px 0px 0px;
-    }
-    .userdata {
-        width: 90%;
-    }
-    .plans {
-        display: block;
-    }
-    .card {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: auto;
-        width: 90%;
-        margin-bottom: 10px;
-    }
-    .step-2img {
-        margin-right: 10px;
-    }
-    .step3-divs {
-        width: 85%;
-    }
+@media only screen and (max-width: 480px) {
+  section {
+    display: block;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(217, 100%, 97%);
+    position: relative;
+  }
+  aside {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    width: 100%;
+    height: 30%;
+    background-image: url(/assets/images/bg-sidebar-mobile.svg);
+    padding-bottom: 20px;
+  }
+  .steps,
+  .info {
+    display: none;
+  }
+  .container {
+    margin: 50px 0px 0px 0px;
+  }
+  .number {
+    margin-right: 10px;
+  }
+  main {
+    background-color: hsl(0, 0%, 100%);
+    width: 80vw;
+    height: 55%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    margin: 0px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .step1btn,
+  .btns {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .next-step,
+  .step2btn,
+  .step3btn,
+  .confirm-btn {
+    margin: 20px 0px 0px 0px;
+  }
+  .userdata {
+    width: 100%;
+  }
+  .plans {
+    display: block;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .timeframe {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .step-2img {
+    margin-right: 10px;
+  }
+  .step3-divs {
+    width: 97%;
+  }
+  .chosen {
+    width: 94%;
+  }
+  .total {
+    width: 96%;
+  }
 }
 @media only screen and (max-width: 376px) {
-    main {
-        top: 35%;
-    }
-} 
+  main {
+    top: 40%;
+    height: 65%;
+  }
+}
 @media only screen and (max-width: 320px) {
-    .card {
-        height: 4vh;
-    }
-    .step3-divs {
-        width: 90%;
-        padding-left: 5px;
-        margin-left: 0px;
-    }
-    .step3-divs span {
-        right: 5px;
-    }
-    main {
-        top: 40%;
-    }
+  .step3-divs {
+    width: 100%;
+    padding-left: 5px;
+    margin-left: 0px;
+  }
+  .step3-divs span {
+    right: 5px;
+  }
+  .step3-divs input {
+    margin-right: 5px;
+  }
+  main {
+    top: 40%;
+  }
+}
+@media only screen and (max-height: 360px) {
+  section {
+    height: 100vh;
+    width: 80vw;
+  }
+  .card {
+    height: 35vh;
+  }
+}
+@media only screen and (max-width: 385px) and (max-height: 640px) {
+  main {
+    top: 40%;
+    height: 70%;
+  }
 }
